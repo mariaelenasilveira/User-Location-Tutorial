@@ -37,6 +37,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1A-j6-PUd">
+                                <rect key="frame" x="341" y="730" width="45" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="Jd5-vm-nF9"/>
+                                    <constraint firstAttribute="height" constant="45" id="zOr-ml-a3m"/>
+                                </constraints>
+                                <state key="normal" title="Go!">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="goAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qVs-hb-SHO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -44,16 +58,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q0g-wO-OgG" secondAttribute="trailing" id="7ee-xV-TaI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9O6-38-KJg" secondAttribute="trailing" id="AP7-eN-ByG"/>
                             <constraint firstItem="iaj-z6-AZa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EjI-Ji-QDv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K1A-j6-PUd" secondAttribute="trailing" constant="28" id="JJj-Fa-AWV"/>
                             <constraint firstItem="9O6-38-KJg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SNS-ba-ySM"/>
                             <constraint firstItem="9O6-38-KJg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TRZ-G5-iev"/>
                             <constraint firstItem="q0g-wO-OgG" firstAttribute="top" secondItem="9O6-38-KJg" secondAttribute="bottom" constant="4" id="ZXC-We-Id6"/>
                             <constraint firstItem="iaj-z6-AZa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k7K-4Q-7GH"/>
                             <constraint firstItem="q0g-wO-OgG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tfW-dt-Aw4"/>
+                            <constraint firstItem="q0g-wO-OgG" firstAttribute="top" secondItem="K1A-j6-PUd" secondAttribute="bottom" constant="42" id="zxg-dH-bSh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="adressLabel" destination="q0g-wO-OgG" id="Rid-qx-emb"/>
+                        <outlet property="goButton" destination="K1A-j6-PUd" id="Q06-Er-Jcz"/>
                         <outlet property="mapView" destination="9O6-38-KJg" id="AfS-ei-YHr"/>
                     </connections>
                 </viewController>
