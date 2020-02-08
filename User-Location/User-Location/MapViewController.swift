@@ -15,10 +15,11 @@ class MapViewController: UIViewController {
     @IBOutlet weak var adressLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var goButton: UIButton!
+    @IBOutlet weak var changeMapButton: UIButton!
     
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 1000
-    var previousLocation: CLLocation?
+       let regionInMeters: Double = 1000
+       var previousLocation: CLLocation?
     
     let geoCoder = CLGeocoder()
     var directionsArray: [MKDirections] = []
@@ -118,6 +119,18 @@ class MapViewController: UIViewController {
         mapView.removeOverlays(mapView.overlays)
         directionsArray.append(directions)
         let _ = directionsArray.map { $0.cancel() }
+    }
+    
+    @IBAction func mapTypeChange(_ sender: UISegmentedControl) {
+        mapView.mapType = MKMapType.init(rawValue: UInt(sender.selectedSegmentIndex)) ?? .standard
+//        switch sender.selectedSegmentIndex {
+//        case 0:
+//            mapView.mapType = .standard
+//        case 1:
+//            mapView.mapType = .satellite
+//        default:
+//            mapView.mapType = .hybrid
+//        }
     }
     
     @IBAction func goAction(_ sender: Any) {
